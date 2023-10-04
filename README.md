@@ -63,7 +63,7 @@ s^2 = \frac{1}{n-1} \sum_{i=0}^{n-1} ( x_i - \bar{x} )^2
 ## Usage
 
 ```javascript
-import incrvariance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-variance@deno/mod.js';
+import incrvariance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-variance@v0.1.1-deno/mod.js';
 ```
 
 #### incrvariance( \[mean] )
@@ -122,7 +122,7 @@ s2 = accumulator();
 
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import incrvariance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-variance@deno/mod.js';
+import incrvariance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-variance@v0.1.1-deno/mod.js';
 
 var accumulator;
 var v;
