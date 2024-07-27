@@ -63,6 +63,11 @@ s^2 = \frac{1}{n-1} \sum_{i=0}^{n-1} ( x_i - \bar{x} )^2
 ## Usage
 
 ```javascript
+import incrvariance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-variance@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-incr-variance/tags). For example,
+
+```javascript
 import incrvariance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-variance@v0.2.2-deno/mod.js';
 ```
 
@@ -122,7 +127,7 @@ s2 = accumulator();
 
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import incrvariance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-variance@v0.2.2-deno/mod.js';
+import incrvariance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-variance@deno/mod.js';
 
 var accumulator;
 var v;
