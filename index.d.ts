@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,16 +16,29 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
 /**
-* Compute an unbiased sample variance incrementally.
+* If provided a value, returns an updated unbiased sample variance; otherwise, returns the current unbiased sample variance.
 *
-* @module @stdlib/stats-incr-variance
+* ## Notes
+*
+* -   If provided `NaN` or a value which, when used in computations, results in `NaN`, the accumulated value is `NaN` for all future invocations.
+*
+* @param x - value
+* @returns unbiased sample variance
+*/
+type accumulator = ( x?: number ) => number | null;
+
+/**
+* Returns an accumulator function which incrementally computes an unbiased sample variance.
+*
+* @param mean - known mean
+* @returns accumulator function
 *
 * @example
-* var incrvariance = require( '@stdlib/stats-incr-variance' );
-*
 * var accumulator = incrvariance();
 *
 * var s2 = accumulator();
@@ -40,12 +53,9 @@
 * s2 = accumulator();
 * // returns 24.5
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function incrvariance( mean?: number ): accumulator;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = incrvariance;
